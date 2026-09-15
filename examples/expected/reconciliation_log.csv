@@ -1,0 +1,10 @@
+record_type,record_id,decision,reason,entity_key,parent_id
+parent,sub-001,retained,highest_status_then_latest_timestamp_then_submission_id,OSN0012,
+parent,sub-002,excluded,superseded_by:sub-001,OSN0012,
+parent,sub-003,retained,highest_status_then_latest_timestamp_then_submission_id,OSN0013,
+household_members,m-001,retained,parent_retained,,sub-001
+household_members,m-002,retained,parent_retained,,sub-001
+household_members,m-003,retained,parent_retained,,sub-001
+household_members,m-004,excluded,parent_known_but_not_authoritative,,sub-002
+household_members,m-005,excluded,parent_missing,,missing-submission
+household_members,m-006,retained,parent_retained,,sub-003

@@ -49,3 +49,10 @@ The initial rules flag invalid ages, duplicate retained member identifiers, and
 differences between reported household size and retained member rows. Rules run
 after reconciliation, so warnings describe the dataset that will actually be
 analysed. See `docs/configuration.md` for configuration details.
+
+## Worked example
+
+The complete example inputs, decision sequence, expected outputs, and audit-log
+interpretation are documented in [`docs/worked-example.md`](docs/worked-example.md).
+The committed snapshots under `examples/expected/` are regenerated during the
+test suite to keep the documentation aligned with the executable behaviour.

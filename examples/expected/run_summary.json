@@ -1,0 +1,8 @@
+{
+  "input_parents": 3,
+  "retained_parents": 2,
+  "excluded_parents": 1,
+  "retained_repeat_rows": 4,
+  "excluded_repeat_rows": 2,
+  "quality_issues": 1
+}

@@ -1,0 +1,2 @@
+rule,severity,record_type,record_id,message,expected_value,observed_value,repeat_group
+household_size_mismatch,warning,parent,sub-003,"Reported household size is 2, but 1 retained member rows were found",2,1,household_members

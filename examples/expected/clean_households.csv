@@ -1,0 +1,3 @@
+submission_id,household_id,review_status,submitted_at,respondent_name,reported_size,_normalised_entity_key
+sub-001,OSN-0012,approved,2026-01-10T09:00:00,Adeola,3,OSN0012
+sub-003,OSN/0013,pending,2026-01-11T08:15:00,Bola,2,OSN0013
