@@ -1,0 +1,33 @@
+parent:
+  id_column: submission_id
+  entity_key: household_id
+  status_column: review_status
+  timestamp_column: submitted_at
+
+status_priority:
+  approved: 3
+  pending: 2
+  rejected: 1
+
+identifiers:
+  uppercase: true
+  remove_spaces: true
+  remove_characters: ["-", "/"]
+
+repeat_groups:
+  household_members:
+    parent_column: parent_submission_id
+    record_id_column: member_id
+
+reconciliation:
+  keep_orphan_repeats: false
+
+quality:
+  household_size_column: reported_size
+  member_age_column: age
+  minimum_age: 0
+  maximum_age: 120
+  severity:
+    household_size_mismatch: warning
+    invalid_member_age: error
+    duplicate_member_id: error
