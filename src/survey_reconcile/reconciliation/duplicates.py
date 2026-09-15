@@ -28,6 +28,7 @@ def reconcile_parents(
         config.parent.timestamp_column,
     }
     groups: dict[str, list[dict[str, str]]] = defaultdict(list)
+    seen_submission_ids: set[str] = set()
     for row in rows:
         missing = required - row.keys()
         if missing:
@@ -36,6 +37,9 @@ def reconcile_parents(
         entity = normalise_identifier(row[config.parent.entity_key], config.identifiers)
         if not submission_id or not entity:
             raise SchemaError("Parent submission and entity identifiers cannot be empty")
+        if submission_id in seen_submission_ids:
+            raise SchemaError(f"Duplicate parent submission identifier '{submission_id}'")
+        seen_submission_ids.add(submission_id)
         enriched = dict(row)
         enriched["_normalised_entity_key"] = entity
         groups[entity].append(enriched)
@@ -76,4 +80,3 @@ def reconcile_parents(
                 "entity_key": entity,
             })
     return retained, excluded, audit
-

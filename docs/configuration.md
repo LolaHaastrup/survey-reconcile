@@ -30,3 +30,11 @@ member-age column, valid age range, and severity of each rule. Quality checks
 are non-destructive: an issue is reported in `quality_issues.csv`, but the
 source value is not silently repaired or removed.
 
+## Validation failures
+
+Processing stops before outputs are trusted when a required column is missing,
+a parent or entity identifier is blank, a submission identifier occurs more
+than once, a review status is not configured, or a timestamp is not valid ISO
+8601. Duplicate submission IDs are rejected globally, even when their
+household identifiers differ, because repeat rows use the submission ID as a
+foreign key and could not otherwise be linked unambiguously.
