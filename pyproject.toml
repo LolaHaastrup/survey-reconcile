@@ -4,13 +4,27 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "survey-reconcile"
-version = "0.2.0"
+version = "0.3.0"
 description = "Auditable reconciliation of Kobo/ODK parent and repeat-group survey exports"
 readme = "README.md"
 requires-python = ">=3.10"
-license = {text = "MIT"}
+license = "MIT"
 authors = [{name = "Omolola Haastrup"}]
+keywords = ["KoboToolbox", "ODK", "survey-data", "data-quality", "reconciliation"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+]
 dependencies = ["PyYAML>=6.0"]
+
+[project.urls]
+Homepage = "https://github.com/LolaHaastrup/survey-reconcile"
+Repository = "https://github.com/LolaHaastrup/survey-reconcile"
+Issues = "https://github.com/LolaHaastrup/survey-reconcile/issues"
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0"]

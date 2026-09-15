@@ -1,5 +1,9 @@
 # Survey Reconcile
 
+[![Tests](https://github.com/LolaHaastrup/survey-reconcile/actions/workflows/tests.yml/badge.svg)](https://github.com/LolaHaastrup/survey-reconcile/actions/workflows/tests.yml)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
 Survey Reconcile is an offline Python tool for turning Kobo/ODK parent and
 repeat-group exports into analysis-ready datasets. It resolves corrected or
 duplicate submissions using explicit review priorities, reconnects child rows
@@ -56,3 +60,10 @@ The complete example inputs, decision sequence, expected outputs, and audit-log
 interpretation are documented in [`docs/worked-example.md`](docs/worked-example.md).
 The committed snapshots under `examples/expected/` are regenerated during the
 test suite to keep the documentation aligned with the executable behaviour.
+
+## Project status
+
+Version 0.3.0 is an alpha release intended for reproducible local processing
+of CSV exports. Review the audit and quality outputs before using reconciled
+records for operational decisions. Contributions and reproducible bug reports
+are welcome; see [`CONTRIBUTING.md`](CONTRIBUTING.md).
